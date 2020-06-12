@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+TODO_COUNT = 10
+
+TODO_COUNT.times do
+  Todo.create(title: Faker::Lorem.word, description: Faker::Lorem.sentence, finished: [true ,false].sample)
+end
